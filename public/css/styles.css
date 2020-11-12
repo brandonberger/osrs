@@ -1,0 +1,31 @@
+
+html, body {
+    height: 100%;
+}
+
+.main-container {
+    margin: 2.5% 5%;
+}
+
+.monster {
+    height: 300px;
+    width: 150px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 15px;
+    background-position: center;
+}
+
+aside {
+    height: 100%;
+    width: 300px;
+    background-color: brown;
+}
+
+#loot-bag {
+    color: white;
+    padding: 30px;
+}
