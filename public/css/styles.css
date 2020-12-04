@@ -7,11 +7,16 @@ html, body {
     margin: 2.5% 5%;
 }
 
+.monster-holder {
+    height: 95vh;
+    overflow:scroll;
+}
+
 .monster {
     height: 300px;
     width: 150px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-    background-size: cover;
+    background-size: contain, cover;
     background-repeat: no-repeat;
     border-radius: 15px;
     cursor: pointer;
@@ -19,13 +24,34 @@ html, body {
     background-position: center;
 }
 
+.monster h2 {
+    color: white;
+    font-size: 24px;
+}
+
 aside {
-    height: 100%;
-    width: 300px;
-    background-color: brown;
+    height: 95vh;
+    overflow: scroll;
+    width: 100%;
+    background-color: #333;
+    border-radius: 15px;
 }
 
 #loot-bag {
     color: white;
     padding: 30px;
+}
+
+#loot-bag .lootItemHolder {
+    text-align:center;
+    font-size: 12px;    
+}
+
+#loot-bag h3 {
+    padding-bottom: 10px;
+}
+
+#loot-bag .monsterLootBag {
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
 }
