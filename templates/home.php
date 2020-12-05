@@ -24,6 +24,16 @@
         <meta property="og:image:width" content="1000">
         <meta property="og:image:height" content="500">
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD9D35VVC1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BD9D35VVC1');
+        </script>
+
     </head>
 
     <body>
