@@ -1,3 +1,7 @@
+// DO NOT LOOK AT THIS CODE, IT'LL MAKE YOU CRY
+// but if you do, just know, im already crying
+
+
 let blackList = [
     11941, // looting bag
     7872, // firegiant bone
@@ -26,6 +30,8 @@ let blackList = [
     11942, // Ecumenical_key
     7884, // troll bone
     7869, // moss giant bone
+    7842, // orgre ribs
+    7899, // basilisk bone
 ];
 
 function getDropTable(monster) {
@@ -41,7 +47,6 @@ function handleItemDrops(dropTable, monster) {
     var item = roll(dropTable);
     addToLootBag(monster, item);
     paintLootBag(loot);
-    // console.log(loot);
 }
 
 
@@ -99,7 +104,6 @@ function roll(table) {
     itemFound = false;
 
     table = shuffle(table);
-    // console.log(table);
 
     var countRolls = 0;
 
@@ -109,7 +113,6 @@ function roll(table) {
         max = findMax(table);
         sum = getSumWeight(table);
         randomNumber = rng(min, max, sum);
-        // console.log(min, max, randomNumber);
         item = searchItem(randomNumber, table);
 
         if (item) {
@@ -153,6 +156,7 @@ function addToLootBag(monster, item) {
             if (item.id == loot[index].drops[i].id) {
                 var newQuantity = (parseInt(loot[index].drops[i].quantity) + parseInt(item.quantity)).toString();
                 loot[index].drops[i].quantity = newQuantity;
+                loot[index].lastUpdated = new Date().getTime();
                 duplicate = true;
                 break;
             }
@@ -160,6 +164,7 @@ function addToLootBag(monster, item) {
 
         if (!duplicate) {
             loot[index].drops.push(item);
+            loot[index].lastUpdated = new Date().getTime();
         }
 
         loot[index].kc += 1;
@@ -167,38 +172,70 @@ function addToLootBag(monster, item) {
         var obj = {
             monster: monster,
             kc: 1,
-            drops: [item]
+            drops: [item],
+            lastUpdated: new Date().getTime()
         };
         loot.push(obj);
     }
 }
+
+function sortLoot( a, b ) {
+    if ( a.lastUpdated < b.lastUpdated ){
+      return -1;
+    }
+    if ( a.lastUpdated > b.lastUpdated ){
+      return 1;
+    }
+    return 0;
+  }
+  
 
 function paintLootBag(loot) {
     // #loot-bag
 
     var lootBag = document.getElementById('loot-bag');
     lootBag.innerHTML = '';
+    loot.sort( sortLoot );
 
     for (var i = loot.length - 1; i >= 0; i--) {
         var lootMonster = document.createElement('div');
         lootMonster.setAttribute('class', 'row monsterLootBag');
+        lootMonster.setAttribute('id', 'monster-'+loot[i].monster);
+
+        
+        // Name
         var lootMonsterName = document.createElement('h3');
         lootMonsterName.setAttribute('class', 'col-12');
+        lootMonsterName.setAttribute('data-toggle', 'collapse');
+        lootMonsterName.setAttribute('data-target', '#collapse'+i);
 
         var monsterNameString = loot[i].monster;
-        monsterNameString = monsterNameString.replace('%20', ' ');
-
+        monsterNameString = monsterNameString.replaceAll('%20', ' ');
         lootMonsterName.innerText = monsterNameString;
 
+        // Arrow
+        var lootMonsterArrow = document.createElement('span');
+        lootMonsterArrow.setAttribute('class', 'material-icons');
+        lootMonsterArrow.innerText = 'keyboard_arrow_down';
+        lootMonsterName.prepend(lootMonsterArrow);
+        
+        // KC
         lootMonsterKC = document.createElement('span');
+        lootMonsterKC.setAttribute('class', 'kc'); 
         lootMonsterKC.innerText = ' x'+loot[i].kc;
-
         lootMonsterName.appendChild(lootMonsterKC);
+
 
         lootMonster.appendChild(lootMonsterName);
         lootBag.appendChild(lootMonster);
 
+        var lootHolder = document.createElement('div');
+        lootHolder.setAttribute('class', 'lootHolder row collapse show');
+        lootHolder.setAttribute('id', 'collapse'+i);
+        lootMonster.appendChild(lootHolder);
+
         for (var j = 0; j < loot[i].drops.length; j++) {
+
             var lootItem = document.createElement('div');
             lootItem.setAttribute('class', 'col-4');
 
@@ -221,7 +258,7 @@ function paintLootBag(loot) {
                 lootItemHolder.appendChild(lootItemText);
 
                 lootItem.appendChild(lootItemHolder);
-                lootMonster.appendChild(lootItem);
+                lootHolder.appendChild(lootItem);
             });
             // lootItem.innerText = loot[i].drops[j].quantity + ' ' + loot[i].drops[j].name;
             // lootMonster.appendChild(lootItem);

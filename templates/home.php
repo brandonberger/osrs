@@ -1,29 +1,52 @@
 
 <html>
     <head>
+        <title>Old School RuneScape RNG Simulator</title>
+        <meta name="description" content="Simulate monster and boss drops with this RNG Simulator for Old School RuneScape.">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <!-- <script src="public/js/hiscores.js"></script> -->
-        
-        <!-- Base -->
-        <!-- <script src="public/js/tables/herbs.js"></script>
-        <script src="public/js/tables/megaRare.js"></script>
-        <script src="public/js/tables/gems.js"></script>
-        <script src="public/js/tables/rare.js"></script> -->
-
-        <!-- Monsters -->
-        <!-- <script src="public/js/tables/monsters/fireGiant.js"></script>
-        <script src="public/js/tables/monsters/goblin.js"></script>
-        <script src="public/js/tables/monsters/imp.js"></script> -->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="public/css/styles.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <link rel="icon" type="image/png" href="/public/img/favicon.png"/>
+
+        <meta property="og:title" content="Old School RuneScape RNG Simulator">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:url" content="https://rngsimulator.com/public/img/social.jpg">
+        <meta property="og:image" content="https://rngsimulator.com/public/img/social.jpg">
+        <meta property="og:image:width" content="1000">
+        <meta property="og:image:height" content="500">
+
     </head>
 
     <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><span class="font-weight-bold">RNG</span>Simulator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Monster Drops <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about">About</a>
+                </li>                
+            </ul>
+            <span class="navbar-text">
+                <a href="https://www.buymeacoffee.com/bdonberger"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a nice cuppa tea&emoji=🍵&slug=bdonberger&button_colour=5F7FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
+            </span>
+        </div>
+        </nav>
 
         <?php 
 
@@ -346,7 +369,7 @@
                     <div class="row monster-holder">
                     <?php
                         foreach ($monsters as $monster => $background) { ?>
-                        <div class="d-flex align-items-center justify-content-center monster col-3" data-monster="<?=str_replace(' ', '%20', $monster)?>" style="background-image:url(public/img/monsters/<?=strtolower(str_replace("'", "", str_replace(' ','-',$monster)))?>.png), url(public/img/backgrounds/<?=$background['image']?>.jpg);">
+                        <div class="d-flex align-items-center justify-content-center monster col-lg-3 col-5" data-monster="<?=str_replace(' ', '%20', $monster)?>" style="background-image:url(public/img/monsters/<?=strtolower(str_replace("'", "", str_replace(' ','-',$monster)))?>.png), url(public/img/backgrounds/<?=$background['image']?>.jpg);">
                             <h2 class="text-center">
                                 <?=$monster?>
                             </h2>
@@ -358,8 +381,14 @@
                 </div>  
                 <div class="col-lg-4 col-12">
                     <aside>
+                        <h2 class="pt-4 px-4 text-white text-center">
+                            Loot Bag
+                            <hr style="background:white;">
+                        </h2>
                         <div id="loot-bag">
-                            
+                            <p class="text-center">
+                                You're loot bag is empty
+                            </p>
                         </div>
                     </aside>
                 </div>
