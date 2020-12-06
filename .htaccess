@@ -2,3 +2,4 @@ Options +FollowSymLinks
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php [NC,L]
+RedirectMatch 403 /\..*$
