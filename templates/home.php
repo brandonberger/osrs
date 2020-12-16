@@ -387,7 +387,7 @@
                     <div class="row monster-holder">
                     <?php
                         foreach ($monsters as $monster => $background) { ?>
-                        <div class="d-flex align-items-center justify-content-center monster col-lg-3 col-5" data-monster="<?=str_replace(' ', '%20', $monster)?>" style="background-image:url(public/img/monsters/<?=strtolower(str_replace("'", "", str_replace(' ','-',$monster)))?>.png), url(public/img/backgrounds/<?=$background['image']?>.jpg);">
+                        <div class="d-flex align-items-center justify-content-center monster col-lg-3 col-5" data-monster="<?=str_replace(' ', '%20', $monster)?>" style="background-image:url(public/img/monsters/<?=strtolower(str_replace('.', '', str_replace("'", "", str_replace(' ','-',$monster))))?>.png), url(public/img/backgrounds/<?=$background['image']?>.jpg);">
                             <h2 class="text-center">
                                 <?=$monster?>
                             </h2>
