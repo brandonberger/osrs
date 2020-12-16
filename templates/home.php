@@ -1,5 +1,11 @@
+<!-- 
 
-<html>
+    ******* You're wasting XP ********
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Old School RuneScape RNG Simulator</title>
         <meta name="description" content="Simulate monster and boss drops with this RNG Simulator for Old School RuneScape.">
@@ -16,6 +22,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <link rel="icon" type="image/png" href="/public/img/favicon.png"/>
+
+        <link rel="canonical" href="https://rngsimulator.com">
 
         <meta property="og:title" content="Old School RuneScape RNG Simulator">
         <meta property="og:image:type" content="image/jpeg">

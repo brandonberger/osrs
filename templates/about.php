@@ -1,5 +1,5 @@
-
-<html>
+<!DOCTYPE html>
+<html land="en">
     <head>
         <title>About | Old School RuneScape RNG Simulator</title>
         <meta name="description" content="Simulate monster and boss drops with this RNG Simulator for Old School RuneScape.">
@@ -11,6 +11,8 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="public/css/styles.css">
+
+        <link rel="canonical" href="https://rngsimulator.com/about">
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">

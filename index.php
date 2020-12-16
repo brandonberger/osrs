@@ -12,6 +12,18 @@ $klein->with('/', function() use ($klein) {
     });
 });
 
+$klein->onHttpError(function ($code, $router) {
+    $service = $router->service();
+    switch ($code) {
+        case 404:
+            $service->title = "404 | Old School RuneScape RNG Simulator";
+            $service->description = "Uh Oh, this page must've gone skilling.";
+            $service->url = 'https://rngsimulator.com/404';
+            $service->render('templates/404.php');
+            break;
+    }
+});
+
 
 // $klein->with('/api', function() use ($klein) {
 //     $klein->respond('GET', '/hiscoreParser', function ($request, $response, $service, $app) {
