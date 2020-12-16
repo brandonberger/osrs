@@ -331,7 +331,7 @@
                     'image' => 'wildy'
                 ],
                 'Revenant hellhound' => [
-                    'image' => 'vz'
+                    'image' => 'wildy'
                 ],
                 'Revenant demon' => [
                     'image' => 'wildy'
