@@ -42,6 +42,8 @@
         gtag('config', 'G-BD9D35VVC1');
         </script>
 
+        <script data-ad-client="ca-pub-2615193109913341" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     </head>
 
     <body>
