@@ -59,7 +59,7 @@
                 <div class="col-12 col-lg-8">
                     <p>
                         <h1>About</h1>
-                        RNG Simulator is an application that allows you to play with different monster's drop rates. It uses a simple algorithim that takes in a list of items with weighted values and generates a random number, resulting in a "random" item drop.  
+                        RNG Simulator is an application that allows you to play with different monster's drop rates. It uses a simple algorithm that takes in a list of items with weighted values and generates a random number, resulting in a "random" item drop.  
                         <br>
                         The rarity of items per monster replicates the exact rarity from Old School RuneScape. 
                         <br>
@@ -68,7 +68,7 @@
                         <br>
                         For suggestions, feedback or concerns contact me at <a href="MAILTO:osrsrngsimulator@gmail.com">osrsrngsimulator@gmail.com</a>
                         <br><br>
-                        If you really like this for some reason and feel the urge to buy me a nice cuppa tea, my unemployed self would very much appreciate it or if you need any digital marketing services hit me up <a target="_blank" rel="noopener" href="https://untitledone.io/">UntitledOne | Digital Marketing Agency</a>. 
+                        If you really like this for some reason and feel the urge to buy me a nice cuppa tea, my unemployed self would very much appreciate it or if you need any digital marketing services hit us up at <a target="_blank" rel="noopener" href="https://untitledone.io/">UntitledOne | Digital Marketing Agency</a>. 
                         <br><a href="https://www.buymeacoffee.com/bdonberger"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a nice cuppa tea&emoji=🍵&slug=bdonberger&button_colour=5F7FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
                         <br><br>
                         <h2>Future Development</h2>
@@ -76,7 +76,7 @@
                             <br>
                             - Grand exchange prices & total loot value will be added in the future.
                             <br>
-                            - Item drops that currently contain a range in quantity will instead select a random quanity within the range.
+                            - Item drops that currently contain a range in quantity will instead select a random quantity within the range.
                         <br><br>
                         <h2>Limitations:</h2>
                         Currently, the application does not take into account the "Rare and Gem drop table" or drops that should be multi-rolls. This will be addressed eventually.
