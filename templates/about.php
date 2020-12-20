@@ -68,7 +68,7 @@
                         <br>
                         For suggestions, feedback or concerns contact me at <a href="MAILTO:osrsrngsimulator@gmail.com">osrsrngsimulator@gmail.com</a>
                         <br><br>
-                        If you really like this for some reason and feel the urge to buy me a nice cuppa tea, my umemployed self would very much appreciate it. 
+                        If you really like this for some reason and feel the urge to buy me a nice cuppa tea, my unemployed self would very much appreciate it or if you need any digital marketing services hit me up <a target="_blank" rel="noopener" href="https://untitledone.io/">UntitledOne | Digital Marketing Agency</a>. 
                         <br><a href="https://www.buymeacoffee.com/bdonberger"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a nice cuppa tea&emoji=🍵&slug=bdonberger&button_colour=5F7FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
                         <br><br>
                         <h2>Future Development</h2>
