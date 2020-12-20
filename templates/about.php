@@ -56,7 +56,7 @@
 
         <div class="fluid-container main-container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 col-lg-8">
                     <p>
                         <h1>About</h1>
                         RNG Simulator is an application that allows you to play with different monster's drop rates. It uses a simple algorithim that takes in a list of items with weighted values and generates a random number, resulting in a "random" item drop.  
